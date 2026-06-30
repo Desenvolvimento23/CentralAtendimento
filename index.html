@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Central de atendimento Campagnaro: vendas, suporte e pós-venda em um só lugar."
+    />
+    <title>Central de Atendimento | Campagnaro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#inicio" aria-label="Campagnaro — página inicial">
+          <span class="brand-crop">
+            <img src="assets/images/logo-campagnaro.png" alt="Campagnaro" />
+          </span>
+        </a>
+
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">
+          <span></span><span></span><span></span>
+          <span class="sr-only">Abrir menu</span>
+        </button>
+
+        <nav class="main-nav" id="main-nav" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+          <a href="#atendimento">Atendimento</a>
+          <a href="#duvidas">Dúvidas frequentes</a>
+          <a class="nav-cta" href="#contato">Fale conosco</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio">
+        <div class="hero-pattern" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">CENTRAL CAMPAGNARO</p>
+          <h1>Olá! Como podemos ajudar?</h1>
+          <p class="hero-copy">
+            Encontre informações sobre vendas, atendimento e pós-venda de um jeito rápido e simples.
+          </p>
+
+          <form class="search-box" role="search">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m21 21-4.35-4.35m2.35-5.65a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" />
+            </svg>
+            <label class="sr-only" for="site-search">Buscar na central de atendimento</label>
+            <input
+              id="site-search"
+              name="busca"
+              type="search"
+              placeholder="Digite sua dúvida. Ex.: troca, garantia, vendedor..."
+              autocomplete="off"
+            />
+            <button type="submit">Buscar</button>
+          </form>
+          <p class="search-feedback" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="support-section section-shell" id="atendimento">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow red">ESCOLHA UM CAMINHO</p>
+            <h2>O que você precisa?</h2>
+          </div>
+          <p>Selecione um assunto para encontrar o canal e as informações certas.</p>
+        </div>
+
+        <div class="support-grid">
+          <article class="support-card searchable" data-search="atendimento cliente ajuda pedido informações">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 13v-2a8 8 0 0 1 16 0v2" />
+                <path d="M5 13H3v5h4v-5H5Zm14 0h2v5h-4v-5h2Z" />
+                <path d="M17 19c-1 2-3 2-5 2" />
+              </svg>
+            </div>
+            <h3>Atendimento ao cliente</h3>
+            <p>Ajuda com pedidos, informações gerais e orientações de compra.</p>
+            <a href="#contato">Acessar atendimento <span>→</span></a>
+          </article>
+
+          <article class="support-card searchable" data-search="vendedores comercial orçamento preço compra representante">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M17 11h5m-2.5-2.5v5" />
+              </svg>
+            </div>
+            <h3>Fale com um vendedor</h3>
+            <p>Solicite orçamento e encontre a melhor solução para sua necessidade.</p>
+            <a href="#contato">Encontrar vendedor <span>→</span></a>
+          </article>
+
+          <article class="support-card searchable" data-search="pós venda garantia troca devolução assistência produto">
+            <div class="icon-box">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z" />
+                <path d="m9 12 2 2 4-4" />
+              </svg>
+            </div>
+            <h3>Pós-venda</h3>
+            <p>Suporte para troca, garantia, devolução e assistência após a compra.</p>
+            <a href="#contato">Solicitar suporte <span>→</span></a>
+          </article>
+        </div>
+
+        <div class="no-results" hidden>
+          <strong>Nenhum assunto encontrado.</strong>
+          <span>Tente buscar por “garantia”, “vendedor” ou “pedido”.</span>
+        </div>
+      </section>
+
+      <section class="faq-section section-shell" id="duvidas">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow red">DÚVIDAS FREQUENTES</p>
+            <h2>Respostas rápidas</h2>
+          </div>
+          <p>As principais informações para agilizar seu atendimento.</p>
+        </div>
+
+        <div class="faq-list">
+          <article
+            class="faq-item searchable"
+            data-search="comprar campagnaro seguro segurança confiança experiência qualidade"
+          >
+            <button type="button" aria-expanded="false">
+              <span>Comprar da Campagnaro é seguro?</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <div>
+                <p>
+                  Sem dúvida, comprar da <strong>Campagnaro</strong> é totalmente seguro. Somos a
+                  <strong>maior loja de peças e acessórios para caminhões no Brasil</strong>, com
+                  mais de <strong>26 anos</strong> de experiência sólida no mercado. Além disso,
+                  temos lojas físicas em Vacaria e São Marcos, no Rio Grande do Sul, o que demonstra
+                  nosso compromisso com a transparência e a confiabilidade.
+                </p>
+                <p>
+                  Ao longo dos anos, construímos uma reputação de excelência e integridade,
+                  garantindo que nossos produtos atendam aos mais altos padrões de qualidade. A
+                  segurança e satisfação dos nossos clientes são fundamentais para nós, e
+                  trabalhamos diligentemente para manter essa confiança.
+                </p>
+                <p>
+                  Pode ter a certeza de que sua experiência de compra conosco será
+                  <strong>segura, profissional e gratificante</strong>. Estamos aqui para atendê-lo
+                  da melhor forma possível e esperamos que você faça parte da nossa extensa lista de
+                  clientes satisfeitos.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <article class="faq-item searchable" data-search="acompanhar pedido entrega rastreio">
+            <button type="button" aria-expanded="false">
+              <span>Como posso acompanhar meu pedido?</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Tenha em mãos o número do pedido e o CPF ou CNPJ usado na compra. Esses dados ajudam
+                nossa equipe a localizar o status e informar a previsão de entrega.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item searchable" data-search="troca devolução produto prazo">
+            <button type="button" aria-expanded="false">
+              <span>Como solicitar troca ou devolução?</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Entre em contato pelo canal de pós-venda com a nota fiscal, fotos do produto e uma
+                breve descrição do motivo. A equipe orientará sobre as próximas etapas.
+              </p>
+            </div>
+          </article>
+
+          <article class="faq-item searchable" data-search="garantia assistência nota fiscal produto">
+            <button type="button" aria-expanded="false">
+              <span>O que preciso para acionar a garantia?</span>
+              <i aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Separe a nota fiscal, o modelo do produto e registros do problema. O prazo e a
+                cobertura podem variar conforme o item adquirido.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="contact-section section-shell" id="contato">
+        <div class="contact-card">
+          <div>
+            <p class="eyebrow">AINDA PRECISA DE AJUDA?</p>
+            <h2>Fale com a equipe Campagnaro</h2>
+            <p>Escolha um dos canais abaixo. Nosso time está pronto para atender você.</p>
+          </div>
+          <div class="contact-list" aria-label="Canais de atendimento">
+            <a
+              href="https://api.whatsapp.com/send?l=pt_br&amp;phone=555432327422"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.8-4.8A8.5 8.5 0 1 1 21 11.5Z" />
+                <path d="M9.2 8.2c.4 2.2 2.2 4 4.4 4.6" />
+              </svg>
+              <span>
+                <small>WhatsApp</small>
+                (54) 3232-7422
+              </span>
+            </a>
+
+            <a
+              href="https://api.whatsapp.com/send?l=pt_br&amp;phone=5554993992000"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.8-4.8A8.5 8.5 0 1 1 21 11.5Z" />
+                <path d="M9.2 8.2c.4 2.2 2.2 4 4.4 4.6" />
+              </svg>
+              <span>
+                <small>WhatsApp</small>
+                (54) 99399-2000
+              </span>
+            </a>
+
+            <a
+              href="https://api.whatsapp.com/send?l=pt_br&amp;phone=5554991345150"
+              target="_blank"
+              rel="noopener"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.8-4.8A8.5 8.5 0 1 1 21 11.5Z" />
+                <path d="M9.2 8.2c.4 2.2 2.2 4 4.4 4.6" />
+              </svg>
+              <span>
+                <small>WhatsApp</small>
+                (54) 99134-5150
+              </span>
+            </a>
+
+            <a href="mailto:vendas@campagnaro.com.br">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              <span>
+                <small>E-mail de vendas</small>
+                vendas@campagnaro.com.br
+              </span>
+            </a>
+
+            <a href="mailto:leonardo@campagnaro.com.br">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <path d="m3 7 9 6 9-6" />
+              </svg>
+              <span>
+                <small>E-mail</small>
+                leonardo@campagnaro.com.br
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="section-shell footer-inner">
+        <span>© <span id="year"></span> Campagnaro. Todos os direitos reservados.</span>
+        <nav class="social-links" aria-label="Redes sociais Campagnaro">
+          <a
+            href="https://www.instagram.com/campagnaroacessorios/"
+            target="_blank"
+            rel="noopener"
+            aria-label="Instagram da Campagnaro"
+            title="Instagram"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle class="social-dot" cx="17.5" cy="6.5" r="1" />
+            </svg>
+          </a>
+          <a
+            href="https://www.youtube.com/@campagnaropecas"
+            target="_blank"
+            rel="noopener"
+            aria-label="YouTube da Campagnaro"
+            title="YouTube"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21.2 7.2a2.8 2.8 0 0 0-2-2C17.5 4.7 12 4.7 12 4.7s-5.5 0-7.2.5a2.8 2.8 0 0 0-2 2A29 29 0 0 0 2.3 12a29 29 0 0 0 .5 4.8 2.8 2.8 0 0 0 2 2c1.7.5 7.2.5 7.2.5s5.5 0 7.2-.5a2.8 2.8 0 0 0 2-2 29 29 0 0 0 .5-4.8 29 29 0 0 0-.5-4.8Z" />
+              <path class="social-fill" d="m10 9 5 3-5 3Z" />
+            </svg>
+          </a>
+          <a
+            href="https://www.tiktok.com/@campagnaroacessorios"
+            target="_blank"
+            rel="noopener"
+            aria-label="TikTok da Campagnaro"
+            title="TikTok"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M15 4v10.2a4.8 4.8 0 1 1-4.8-4.8" />
+              <path d="M15 4c.4 2.5 1.8 4 4.5 4.5" />
+            </svg>
+          </a>
+          <a
+            href="https://www.facebook.com/campagnaroacessorios"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook da Campagnaro"
+            title="Facebook"
+          >
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M14.5 8H18V4h-3.5C11 4 9 6 9 9.5V12H6v4h3v7h4v-7h3.5l.7-4H13V9.5c0-1 .5-1.5 1.5-1.5Z" />
+            </svg>
+          </a>
+        </nav>
+        <nav aria-label="Links do rodapé">
+          <a href="#">Política de privacidade</a>
+          <a href="#atendimento">Central de atendimento</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

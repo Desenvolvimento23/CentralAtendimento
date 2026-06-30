@@ -423,23 +423,23 @@ svg {
 
 .seller-grid {
   display: grid;
-  max-width: 760px;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .seller-card {
-  display: grid;
+  display: flex;
   overflow: hidden;
-  grid-template-columns: 280px 1fr;
+  flex-direction: column;
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: 16px;
   background: #fff;
-  box-shadow: 0 18px 45px rgba(50, 24, 24, 0.07);
+  box-shadow: 0 14px 34px rgba(50, 24, 24, 0.07);
 }
 
 .seller-photo {
-  min-height: 350px;
   overflow: hidden;
+  aspect-ratio: 4 / 5;
   background: #eee;
 }
 
@@ -453,15 +453,15 @@ svg {
 
 .seller-info {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: center;
-  padding: 38px;
+  padding: 20px;
 }
 
 .seller-badge {
-  margin-bottom: 15px;
-  padding: 7px 10px;
+  margin-bottom: 10px;
+  padding: 6px 8px;
   border-radius: 7px;
   background: #fff0f0;
   color: var(--red);
@@ -473,24 +473,18 @@ svg {
 
 .seller-info h3 {
   margin: 0;
-  font-size: 30px;
+  font-size: 18px;
   letter-spacing: -0.03em;
-}
-
-.seller-info > p {
-  margin: 14px 0 25px;
-  color: var(--muted);
-  font-size: 14px;
-  line-height: 1.7;
 }
 
 .seller-contact {
   display: grid;
-  min-width: 245px;
-  grid-template-columns: 32px 1fr;
-  gap: 10px;
+  width: 100%;
+  grid-template-columns: 24px 1fr;
+  gap: 8px;
   align-items: center;
-  padding: 11px 16px;
+  margin-top: 18px;
+  padding: 10px 12px;
   border-radius: 11px;
   background: var(--red);
   color: #fff;
@@ -504,8 +498,8 @@ svg {
 }
 
 .seller-contact svg {
-  width: 21px;
-  height: 21px;
+  width: 19px;
+  height: 19px;
 }
 
 .seller-contact small {
@@ -784,6 +778,10 @@ svg {
     min-height: 265px;
   }
 
+  .seller-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .contact-card {
     align-items: stretch;
     flex-direction: column;
@@ -855,21 +853,46 @@ svg {
   }
 
   .seller-card {
-    grid-template-columns: 1fr;
+    border-radius: 12px;
   }
 
-  .seller-photo {
-    height: 380px;
-    min-height: 0;
+  .seller-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .seller-info {
-    padding: 28px 24px;
+    padding: 11px;
+  }
+
+  .seller-badge {
+    margin-bottom: 7px;
+    padding: 4px 6px;
+    font-size: 8px;
+  }
+
+  .seller-info h3 {
+    font-size: 14px;
   }
 
   .seller-contact {
-    width: 100%;
-    min-width: 0;
+    min-height: 36px;
+    grid-template-columns: 17px 1fr;
+    gap: 5px;
+    margin-top: 10px;
+    padding: 7px 8px;
+    font-size: 0;
+  }
+
+  .seller-contact svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .seller-contact small {
+    margin: 0;
+    color: #fff;
+    font-size: 9px;
   }
 
   .contact-section {

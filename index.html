@@ -125,6 +125,7 @@
         ]
       }
     </script>
+    <script src="js/products-catalog.js" defer></script>
     <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -172,12 +173,75 @@
               id="site-search"
               name="busca"
               type="search"
-              placeholder="Digite sua dúvida. Ex.: troca, garantia, vendedor..."
+              placeholder="Busque um produto ou dúvida. Ex.: tanque, farol, pagamento..."
               autocomplete="off"
             />
             <button type="submit">Buscar</button>
           </form>
           <p class="search-feedback" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section
+        class="product-search-section section-shell"
+        id="resultado-busca"
+        aria-labelledby="search-results-title"
+        hidden
+      >
+        <div class="product-search-header">
+          <div>
+            <p class="eyebrow red">ATENDIMENTO POR PRODUTO</p>
+            <h2 id="search-results-title">Resultados da sua busca</h2>
+          </div>
+          <button class="clear-search" type="button">Limpar busca</button>
+        </div>
+
+        <div class="search-route">
+          <div class="search-route-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15a4 4 0 0 1-4 4H8l-5 3 1.7-5.1A7 7 0 0 1 3 12c0-3.9 3.6-7 8-7h2c4.4 0 8 3.1 8 7v3Z" />
+              <path d="M8 12h.01M12 12h.01M16 12h.01" />
+            </svg>
+          </div>
+          <div>
+            <strong id="search-route-title">Dúvida sobre produtos</strong>
+            <p id="search-route-copy">
+              Escolha um produto abaixo ou envie sua pergunta para a equipe de vendedores.
+            </p>
+          </div>
+          <a
+            class="search-route-action"
+            id="search-general-contact"
+            href="https://api.whatsapp.com/send?l=pt_br&amp;phone=5554993992000"
+            target="_blank"
+            rel="noopener"
+          >
+            Enviar minha dúvida
+          </a>
+        </div>
+
+        <div class="product-results-summary">
+          <p id="product-results-count"></p>
+          <span>Catálogo Campagnaro</span>
+        </div>
+
+        <div class="product-results" id="product-results"></div>
+
+        <button class="load-more-products" type="button" hidden>
+          Mostrar mais produtos
+        </button>
+
+        <div class="product-search-empty" id="product-search-empty" hidden>
+          <strong>Não encontramos um produto com esse termo.</strong>
+          <p>Você ainda pode enviar a pergunta para nossa equipe, que ajudará a localizar a peça certa.</p>
+          <a
+            id="empty-search-contact"
+            href="https://api.whatsapp.com/send?l=pt_br&amp;phone=5554993992000"
+            target="_blank"
+            rel="noopener"
+          >
+            Perguntar aos vendedores
+          </a>
         </div>
       </section>
 
@@ -255,7 +319,6 @@
               />
             </div>
             <div class="seller-info">
-              <span class="seller-badge">Chefe de vendas</span>
               <h3>Leonardo</h3>
               <a
                 class="seller-contact"
@@ -280,7 +343,6 @@
               />
             </div>
             <div class="seller-info">
-              <span class="seller-badge">Vendedor</span>
               <h3>Assis</h3>
               <a
                 class="seller-contact"
@@ -305,7 +367,6 @@
               />
             </div>
             <div class="seller-info">
-              <span class="seller-badge">Vendedor</span>
               <h3>Patric</h3>
               <a
                 class="seller-contact"
@@ -330,7 +391,6 @@
               />
             </div>
             <div class="seller-info">
-              <span class="seller-badge">Vendedor</span>
               <h3>Christopher</h3>
               <a
                 class="seller-contact"
